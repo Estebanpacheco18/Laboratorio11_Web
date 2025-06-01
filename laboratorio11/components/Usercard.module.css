@@ -1,7 +1,9 @@
 .card {
-    transition: transform 0.2s ease;
+    transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.2s;
+    will-change: transform, box-shadow;
 }
-
 .card:hover {
-    transform: scale(1.05);
+    transform: scale(1.07) rotate(-1deg);
+    box-shadow: 0 8px 32px 0 rgba(99, 102, 241, 0.25);
+    z-index: 2;
 }
