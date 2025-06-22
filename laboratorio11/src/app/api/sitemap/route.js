@@ -1,9 +1,8 @@
-export async function GET(req) {
-  // Ejemplo:
+export async function GET() {
   const dynamicRoutes = [
     '/blog',
     '/contact',
-    '/', // Home
+    '/', // Home page
   ];
 
   const baseUrl = 'https://misitio.com';
