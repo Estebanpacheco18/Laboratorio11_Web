@@ -1,4 +1,4 @@
-import styles from './UserCard.module.css';
+import styles from './Usercard.module.css';
 import { EnvelopeIcon, UserCircleIcon } from '@heroicons/react/24/solid';
 
 export default function UserCard({ name, email, image }) {

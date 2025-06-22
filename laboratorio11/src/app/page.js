@@ -1,5 +1,5 @@
 import UserCard from '../../components/Usercards';
-import Button from '../../components/Button';
+import Button from '../../components/button';
 import CardContainer from '../../components/CardContainer';
 import Link from 'next/link';
 import Head from 'next/head';
