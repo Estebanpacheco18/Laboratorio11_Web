@@ -1,8 +1,9 @@
 'use client';
+import { Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Head from 'next/head';
 
-export default function Contact() {
+function ContactContent() {
   const params = useSearchParams();
   const user = params.get('user');
   const email = params.get('email');
@@ -30,5 +31,13 @@ export default function Contact() {
         )}
       </main>
     </>
+  );
+}
+
+export default function Contact() {
+  return (
+    <Suspense fallback={<div>Cargando...</div>}>
+      <ContactContent />
+    </Suspense>
   );
 }
