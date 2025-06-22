@@ -1,8 +1,21 @@
+// Simula obtener datos de una "base de datos"
+async function getBlogPosts() {
+  // consulta real a una base de datos o CMS
+  return [
+    { slug: 'primer-post' },
+    { slug: 'segundo-post' },
+    { slug: 'tercer-post' }
+  ];
+}
+
 export async function GET() {
+  const blogPosts = await getBlogPosts();
+
   const dynamicRoutes = [
-    '/blog',
+    '/',
     '/contact',
-    '/', // Home page
+    '/blog',
+    ...blogPosts.map(post => `/blog/${post.slug}`),
   ];
 
   const baseUrl = 'https://misitio.com';
